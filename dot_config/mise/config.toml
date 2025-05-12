@@ -1,0 +1,35 @@
+[tools]
+1password-cli = "latest"
+aws-cli = "latest"
+bun = "latest"
+chezmoi = "latest"
+cloudflared = "latest"
+editorconfig-checker = "latest"
+gh = "latest"
+groovy = "latest"
+hadolint = "latest"
+java = "latest"
+k6 = "latest"
+lua = "latest"
+maven = "latest"
+node = "latest"
+pipx = "latest"
+python = "latest"
+ruby = "latest"
+task = "latest"
+tmux = "latest"
+
+[hooks]
+enter = "mise i -q"
+
+[settings]
+os = "macos"
+arch = "x86_64"
+
+[settings.npm]
+bun = true
+
+[settings.status]
+missing_tools = "if_other_versions_installed"
+show_env = true
+show_tools = true
