@@ -1,0 +1,13 @@
+[user]
+	name = Patrick Meunier
+	email = patrick@tekktonaut.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDNYj60UgoeRArIi9K8bKscQE6laR3ObRbfRHDSmbani
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true

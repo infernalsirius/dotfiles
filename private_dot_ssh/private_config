@@ -1,0 +1,43 @@
+# https://linuxize.com/post/using-the-ssh-config-file/
+
+# https://github.com/maxgoedjen/secretive
+
+# TODO: Script this so it is added automaticly
+# ChallengeResponseAuthentication no
+# PasswordAuthentication no
+# PermitRootLogin no
+
+# ssh_args = -C -o ControlMaster=auto -o ControlPersist=60s -o ControlPath=/dev/shm/cp%h-%p-%
+
+IgnoreUnknown Include
+# Include ~/.ssh/config.local/*
+Include ~/.ssh/1Password/config
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# Comment this line if you don't want it to be added again.
+Include ~/.orbstack/ssh/config
+
+#############################################
+# Base configuration                        #
+# ref: https://www.noah.org/wiki/SSH_config #
+#############################################
+
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  # ForwardAgent yes
+  LogLevel INFO
+  Compression yes
+  GSSAPIAuthentication no
+  # ForwardX11 no
+  # ForwardX11Trusted no
+  ServerAliveInterval 30
+  ServerAliveCountMax 120
+  TCPKeepAlive no
+  KeepAlive yes
+
+#############################################
+# Personal servers                          #
+#############################################
+
+# Host *
+#   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
