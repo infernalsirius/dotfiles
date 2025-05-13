@@ -1,10 +1,6 @@
 # Initialize atuin
 atuin init fish | source
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/patrick/.rd/bin"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 source /Users/patrick/.config/op/plugins.sh
 
 # bun
